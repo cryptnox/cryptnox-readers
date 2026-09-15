@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Which services and operating systems work with a Cryptnox FIDO2 NFC card, as second-factor or passwordless sign-in, and where extra software is needed." name="description" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIDO2 Card Compatibility — Services and Platforms &mdash; Cryptnox Smart Card Readers</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8120f1fa" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="canonical" href="https://docs.cryptnox.com/cryptnox-readers/fido2-compatibility.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2882ecd3"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Click-to-Tap: FIDO2 User Presence on a Desktop Reader" href="click-to-tap.html" />
+    <link rel="prev" title="Smart Card Reader Compatibility by Country" href="reader-compatibility.html" />
+ 
+
+
+
+
+
+
+<meta name="description" content="Which services and operating systems work with a Cryptnox FIDO2 NFC card, as second-factor or passwordless sign-in, and where extra software is needed." />
+
+<link rel="canonical" href="https://docs.cryptnox.com/cryptnox-readers/fido2-compatibility.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.cryptnox.com/cryptnox-readers/fido2-compatibility.html" />
+<meta property="og:title" content="FIDO2 Card Compatibility — Services and Platforms | Cryptnox Docs" />
+<meta property="og:description" content="Which services and operating systems work with a Cryptnox FIDO2 NFC card, as second-factor or passwordless sign-in, and where extra software is needed." />
+<meta property="og:image" content="https://cryptnox.com/wp-content/uploads/2026/09/cryptnox-documentation-social.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Cryptnox Documentation — official Cryptnox technical documentation" />
+<meta property="og:site_name" content="Cryptnox Docs" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@CryptnoxTech" />
+<meta name="twitter:title" content="FIDO2 Card Compatibility — Services and Platforms | Cryptnox Docs" />
+<meta name="twitter:description" content="Which services and operating systems work with a Cryptnox FIDO2 NFC card, as second-factor or passwordless sign-in, and where extra software is needed." />
+<meta name="twitter:image" content="https://cryptnox.com/wp-content/uploads/2026/09/cryptnox-documentation-social.jpg" />
+<meta name="twitter:image:alt" content="Cryptnox Documentation — official Cryptnox technical documentation" />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptnox.com/#organization",
+      "name": "Cryptnox SA",
+      "url": "https://cryptnox.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://docs.cryptnox.com/#logo",
+        "url": "https://docs.cryptnox.com/_static/cryptnox-logo.svg",
+        "contentUrl": "https://docs.cryptnox.com/_static/cryptnox-logo.svg",
+        "caption": "Cryptnox"
+      },
+      "sameAs": [
+        "https://shop.cryptnox.com/",
+        "https://github.com/cryptnox"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://docs.cryptnox.com/#website",
+      "url": "https://docs.cryptnox.com",
+      "name": "Cryptnox Docs",
+      "alternateName": "Cryptnox",
+      "publisher": { "@id": "https://cryptnox.com/#organization" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://docs.cryptnox.com/cryptnox-readers/#webpage",
+      "url": "https://docs.cryptnox.com/cryptnox-readers/",
+      "name": "Cryptnox Smart Card Readers",
+      "description": "Compatibility documentation for Cryptnox USB smart card readers: national eID and professional cards by country, and FIDO2 services and platforms.",
+      "isPartOf": { "@id": "https://docs.cryptnox.com/#website" },
+      "publisher": { "@id": "https://cryptnox.com/#organization" },
+      "inLanguage": "en-US",
+      "keywords": "Cryptnox, smart card reader, USB-C, CCID, PC/SC, eID, FIDO2, NFC, extended APDU, documentation"
+    }
+  ]
+}
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GT-PJ7HDFB');</script>
+
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #101f2e" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Cryptnox Smart Card Readers
+              <img src="_static/cryptnox-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Compatibility guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reader-compatibility.html">Smart Card Reader Compatibility by Country</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">FIDO2 Card Compatibility — Services and Platforms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#table-a-platform-and-transport">Table A — platform and transport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-b-services">Table B — services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-composition-rule">The composition rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-questions">Common questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#related">Related</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="click-to-tap.html">Click-to-Tap: FIDO2 User Presence on a Desktop Reader</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #101f2e" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cryptnox Smart Card Readers</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">FIDO2 Card Compatibility — Services and Platforms</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fido2-card-compatibility-services-and-platforms">
+<h1>FIDO2 Card Compatibility — Services and Platforms<a class="headerlink" href="#fido2-card-compatibility-services-and-platforms" title="Link to this heading"></a></h1>
+<p><em>Last reviewed: 26 August 2026.</em></p>
+<p>This page answers: <strong>will a Cryptnox FIDO2 card sign me in to a given service, on the
+device I actually use?</strong></p>
+<p>The answer is never a single yes or no, because FIDO2 compatibility has two independent
+halves. Read your <strong>platform</strong> row, read your <strong>service</strong> row, and take the intersection.</p>
+<nav class="contents local" id="on-this-page">
+<p class="topic-title">On this page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#table-a-platform-and-transport" id="id1">Table A — platform and transport</a></p></li>
+<li><p><a class="reference internal" href="#table-b-services" id="id2">Table B — services</a></p></li>
+<li><p><a class="reference internal" href="#the-composition-rule" id="id3">The composition rule</a></p></li>
+<li><p><a class="reference internal" href="#limitations" id="id4">Limitations</a></p></li>
+<li><p><a class="reference internal" href="#common-questions" id="id5">Common questions</a></p></li>
+<li><p><a class="reference internal" href="#related" id="id6">Related</a></p></li>
+</ul>
+</nav>
+<section id="table-a-platform-and-transport">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Table A — platform and transport</a><a class="headerlink" href="#table-a-platform-and-transport" title="Link to this heading"></a></h2>
+<p>This decides <strong>which protocol is available at all</strong>. It is a property of the operating
+system and the connection, not of the service.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.0%" />
+<col style="width: 20.0%" />
+<col style="width: 22.0%" />
+<col style="width: 42.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Platform</p></th>
+<th class="head"><p>Transport</p></th>
+<th class="head"><p>Protocol available</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Windows 10/11</strong></p></td>
+<td><p>NFC reader or contact reader</p></td>
+<td><p>full FIDO2 / CTAP2</p></td>
+<td><p>Broadest support. Works across all major browsers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>iOS</strong></p></td>
+<td><p>NFC (hold card to top of phone)</p></td>
+<td><p>FIDO2 / CTAP2</p></td>
+<td><p>iPhone 7 and later, iOS 13.3+.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Android</strong></p></td>
+<td><p>NFC</p></td>
+<td><p><strong>CTAP1 / U2F only</strong></p></td>
+<td><p>Android does <strong>not</strong> support CTAP2 over external NFC security keys. Most services
+keep U2F backward compatibility, so second-factor sign-in works — but see the
+worked example below.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>macOS</strong></p></td>
+<td><p>NFC reader or contact reader</p></td>
+<td><p>varies</p></td>
+<td><p>Support differs by macOS version and browser. Test before relying on it.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Linux</strong></p></td>
+<td><p>contact reader</p></td>
+<td><p>FIDO2 <strong>via a bridge</strong></p></td>
+<td><p>Browsers expect a HID interface; CCID smart card readers do not present one.
+Requires the open-source <a class="reference external" href="https://github.com/cryptnox/cryptnox-fido2-bridge">Cryptnox FIDO2 HID bridge</a>, a small daemon that presents
+the card to the browser as an HID-FIDO device. <strong>This applies to every FIDO2 use on
+Linux</strong> — second factor, passwordless, everything.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="table-b-services">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Table B — services</a><a class="headerlink" href="#table-b-services" title="Link to this heading"></a></h2>
+<p>This decides <strong>what the service accepts</strong>. Nearly every service that supports security
+keys uses them as a <strong>second factor</strong>; passwordless is a smaller, explicitly enabled set.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22.0%" />
+<col style="width: 16.0%" />
+<col style="width: 18.0%" />
+<col style="width: 44.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Service</p></th>
+<th class="head"><p>Second factor</p></th>
+<th class="head"><p>Passwordless</p></th>
+<th class="head"><p>Setup guide</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Microsoft</strong> (Entra ID / Account)</p></td>
+<td><p>yes</p></td>
+<td><p><strong>yes</strong> (Entra ID)</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/setup-guide-cryptnox-fido2-card-for-microsoft-account/">guide</a> · <a class="reference external" href="https://cryptnox.com/collections/best-fido2-security-key-cards-for-microsoft/">overview</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Google</strong></p></td>
+<td><p>yes</p></td>
+<td><p><strong>yes</strong> (Advanced Protection)</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/configure-fido2-card-to-google-account-complete-guide/">guide</a> · <a class="reference external" href="https://cryptnox.com/collections/best-fido2-security-key-cards-for-google/">overview</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>AGOV</strong> (Switzerland)</p></td>
+<td><p>yes</p></td>
+<td><p><strong>yes</strong></p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/collections/how-to-register-on-agov-using-cryptnox-fido2-card/">registration guide</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>SwissID</strong> (Switzerland)</p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/collections/how-to-register-on-swissid-using-cryptnox-fido2-card/">registration guide</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>login.gov</strong> (United States)</p></td>
+<td><p>yes</p></td>
+<td><p><strong>no</strong></p></td>
+<td><p>Always requires a password in addition to MFA — the key is a second factor, never
+the only one. <a class="reference external" href="https://cryptnox.com/best-fido2-security-key-cards-login-gov/">overview</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Apple</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/best-fido2-security-key-cards-for-apple/">overview</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>GitLab</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/securely-setup-fido2-card-for-gitlab-account-cryptnox/">guide</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Facebook</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/setup-guide-for-fido2-card-to-facebook-account/">guide</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>X / Twitter</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/how-to-set-x-account-passkey-guide/">guide</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Cloudflare</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/collections/best-fido2-security-key-cards-for-cloudflare/">overview</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Shopify</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/collections/best-fido2-security-key-cards-for-shopify/">overview</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Binance</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/best-fido2-security-key-cards-binance/">overview</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Coinbase</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/collections/best-fido2-security-key-cards-for-coinbase/">overview</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Bitfinex</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/collections/best-fido2-security-key-cards-for-bitfinex/">overview</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Bank of America</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/collections/best-fido2-security-key-cards-for-bank-of-america/">overview</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Dropbox</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/collections/best-fido2-security-key-cards-for-dropbox/">overview</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>NordVPN</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/best-fido2-security-key-cards-nordvpn/">overview</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Fastmail</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/best-fido2-security-key-cards-fastmail/">overview</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>GoDaddy</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/collections/best-fido2-security-key-cards-for-godaddy/">overview</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>SSH</strong></p></td>
+<td><p>yes</p></td>
+<td><p>—</p></td>
+<td><p><a class="reference external" href="https://cryptnox.com/ssh-with-the-fido2/">guide</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>A dash under <em>Passwordless</em> means the service has not enabled FIDO2-only sign-in, or we
+have not confirmed that it has — not that it is impossible. Test before relying on it.</p>
+</section>
+<section id="the-composition-rule">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">The composition rule</a><a class="headerlink" href="#the-composition-rule" title="Link to this heading"></a></h2>
+<p><strong>Your answer is the intersection of your platform row and your service row.</strong> Both must
+allow what you are trying to do.</p>
+<p>The worked example is <strong>Microsoft on Android</strong>:</p>
+<ul class="simple">
+<li><p>the card is CTAP2-capable ✅</p></li>
+<li><p>Microsoft Entra ID is CTAP2-capable ✅</p></li>
+<li><p><strong>the combination still fails</strong> ❌</p></li>
+</ul>
+<p>Android speaks only CTAP1/U2F over an external NFC key, and Microsoft requires CTAP2 with
+user verification on every attempt — it does not accept U2F credentials. Use a reader on
+Windows, or NFC on iPhone.</p>
+<p>That single case teaches the whole model: <strong>capability is not the same as a usable path.</strong>
+A component being able to do something says nothing about whether the platform in front of
+it will ask.</p>
+<p>Two related consequences worth stating plainly:</p>
+<ul class="simple">
+<li><p><strong>One card can appear twice in an account.</strong> Registering the same card over CTAP1 on
+Android and CTAP2 on desktop creates two separate credentials. That is expected.</p></li>
+<li><p><strong>Cryptnox FIDO2 is listed by Microsoft</strong> for Entra ID attestation (AAGUIDs
+<code class="docutils literal notranslate"><span class="pre">9c835346-796b-4c27-8898-d6032f515cc5</span></code> and
+<code class="docutils literal notranslate"><span class="pre">1d1b4e33-76a1-47fb-97a0-14b10d0933f1</span></code>, both NFC). Attestation eligibility is not the
+same as passwordless support, and individual server implementations of CTAP1 vary.</p></li>
+</ul>
+</section>
+<section id="limitations">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Limitations</a><a class="headerlink" href="#limitations" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Passwordless everywhere.</strong> These are <strong>MFA-first</strong>: a hardware second factor on top of
+a password. Passwordless works only where a service has explicitly enabled FIDO2-only
+sign-in. login.gov is the clearest counter-example — it always requires a password.</p></li>
+<li><p><strong>CTAP2 over Android NFC.</strong> Second-factor U2F works on most services; Microsoft does not.</p></li>
+<li><p><strong>Linux without the bridge.</strong> A CCID reader alone will not satisfy a browser.</p></li>
+<li><p><strong>Fingerprint on the card.</strong> FIDO2 user verification on these cards is <strong>PIN-based</strong>.</p></li>
+<li><p><strong>Migrate credentials between cards.</strong> Each card holds its own keys. A replacement card
+must be registered with each service again.</p></li>
+<li><p><strong>Act as a USB device.</strong> These are NFC and contact smart cards, not USB tokens.</p></li>
+</ul>
+</section>
+<section id="common-questions">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Common questions</a><a class="headerlink" href="#common-questions" title="Link to this heading"></a></h2>
+<p><strong>Does a FIDO2 security key card work with Android over NFC?</strong>
+Yes for second-factor sign-in on most services, because Android supports CTAP1/U2F over
+external NFC keys and most services keep U2F backward compatibility. It does not work with
+Microsoft, which requires CTAP2 with user verification.</p>
+<p><strong>Which services support passwordless sign-in with an external NFC card?</strong>
+A small set that has explicitly enabled FIDO2-only login — Microsoft Entra ID, Google
+Advanced Protection and AGOV among them. Most services accept the key only as a second
+factor on top of a password, and login.gov always requires one.</p>
+<p><strong>Why does my security key appear twice in my account settings?</strong>
+Because CTAP1 and CTAP2 registrations create separate credentials. Registering the same
+card on an Android phone and on a desktop produces two entries. Both work.</p>
+<p><strong>What decides whether a given service and device combination works?</strong>
+Three things: the card’s capability, the platform’s protocol support, and what the service
+accepts. In practice the platform is the usual blocker — most notably Android, which
+speaks only CTAP1 over external NFC keys.</p>
+<p><strong>Do I need extra software?</strong>
+On Linux, yes — the open-source Cryptnox FIDO2 HID bridge, for every FIDO2 use. On Windows,
+macOS and iOS, no. Setting or changing the card PIN uses the Cryptnox app.</p>
+</section>
+<section id="related">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Related</a><a class="headerlink" href="#related" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cryptnox.com/cryptnox-fido2-card-technical-specifications/">FIDO2 card technical specifications</a></p></li>
+<li><p><a class="reference external" href="https://cryptnox.com/cryptnox-nfc-fido-card-android/">Using the card with Android</a></p></li>
+<li><p><a class="reference external" href="https://cryptnox.com/fido2-card-for-windows-setup-guide/">Windows setup guide</a></p></li>
+<li><p><a class="reference external" href="https://cryptnox.com/how-to-set-pin-for-the-fido2-card/">Setting the card PIN</a></p></li>
+<li><p><a class="reference external" href="https://cryptnox.com/how-to-manage-credential-of-fido2-card-security-key/">Managing credentials on the card</a></p></li>
+<li><p><a class="reference internal" href="reader-compatibility.html"><span class="doc">Smart card reader compatibility by country</span></a></p></li>
+</ul>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "TechArticle",
+   "@id": "https://docs.cryptnox.com/cryptnox-readers/fido2-compatibility.html#article",
+   "headline": "FIDO2 Card Compatibility — Services and Platforms",
+   "description": "Which services and operating systems work with a Cryptnox FIDO2 NFC card, as second-factor or passwordless sign-in, and where extra software is needed.",
+   "url": "https://docs.cryptnox.com/cryptnox-readers/fido2-compatibility.html",
+   "inLanguage": "en",
+   "dateModified": "2026-08-26",
+   "datePublished": "2026-08-26",
+   "author": {
+    "@type": "Organization",
+    "name": "Cryptnox SA",
+    "url": "https://cryptnox.com/"
+   },
+   "publisher": {
+    "@id": "https://cryptnox.com/#organization"
+   },
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://docs.cryptnox.com/cryptnox-readers/fido2-compatibility.html"
+   },
+   "about": [
+    {
+     "@type": "Thing",
+     "name": "FIDO2"
+    },
+    {
+     "@type": "Thing",
+     "name": "WebAuthn"
+    },
+    {
+     "@type": "Thing",
+     "name": "CTAP2"
+    },
+    {
+     "@type": "Thing",
+     "name": "CTAP1"
+    },
+    {
+     "@type": "Thing",
+     "name": "U2F"
+    },
+    {
+     "@type": "Thing",
+     "name": "NFC security key"
+    },
+    {
+     "@type": "Thing",
+     "name": "Passwordless authentication"
+    },
+    {
+     "@type": "Thing",
+     "name": "Multi-factor authentication"
+    },
+    {
+     "@type": "Thing",
+     "name": "Microsoft Entra ID"
+    },
+    {
+     "@type": "Thing",
+     "name": "Google Advanced Protection"
+    },
+    {
+     "@type": "Thing",
+     "name": "AGOV"
+    },
+    {
+     "@type": "Thing",
+     "name": "SwissID"
+    },
+    {
+     "@type": "Thing",
+     "name": "login.gov"
+    },
+    {
+     "@type": "Thing",
+     "name": "Android NFC"
+    },
+    {
+     "@type": "Thing",
+     "name": "Linux FIDO2 bridge"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://docs.cryptnox.com/cryptnox-readers/fido2-compatibility.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Does a FIDO2 security key card work with Android over NFC?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes for second-factor sign-in on most services, because Android supports CTAP1/U2F over external NFC keys and most services keep U2F backward compatibility. It does not work with Microsoft, which requires CTAP2 with user verification."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which services support passwordless sign-in with an external NFC card?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A small set that has explicitly enabled FIDO2-only login — Microsoft Entra ID, Google Advanced Protection and AGOV among them. Most services accept the key only as a second factor on top of a password, and login.gov always requires one."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why does my security key appear twice in my account settings?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Because CTAP1 and CTAP2 registrations create separate credentials. Registering the same card on an Android phone and on a desktop produces two entries. Both work."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What decides whether a given service and device combination works?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Three things: the card's capability, the platform's protocol support, and what the service accepts. In practice the platform is the usual blocker — most notably Android, which speaks only CTAP1 over external NFC keys."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need extra software?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "On Linux, yes — the open-source Cryptnox FIDO2 HID bridge, for every FIDO2 use. On Windows, macOS and iOS, no. Setting or changing the card PIN uses the Cryptnox app."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script></section>
+</section>
+
+
+           </div>
+          </div>
+          <hr/>
+<p style="margin-bottom: 0.25rem;">Last updated on 2026-09-15.</p>
+<p style="margin-bottom: 0.75rem;">&#169; Copyright 2026, Cryptnox SA.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-PJ7HDFB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'GT-PJ7HDFB', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

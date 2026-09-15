@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="What the Cryptnox Click-to-Tap button does, why FIDO2 sign-in on a desktop contact reader needs it, what it requires, and how to troubleshoot it." name="description" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click-to-Tap: FIDO2 User Presence on a Desktop Reader &mdash; Cryptnox Smart Card Readers</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8120f1fa" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="canonical" href="https://docs.cryptnox.com/cryptnox-readers/click-to-tap.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2882ecd3"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="FIDO2 Card Compatibility — Services and Platforms" href="fido2-compatibility.html" />
+ 
+
+
+
+
+
+
+<meta name="description" content="What the Cryptnox Click-to-Tap button does, why FIDO2 sign-in on a desktop contact reader needs it, what it requires, and how to troubleshoot it." />
+
+<link rel="canonical" href="https://docs.cryptnox.com/cryptnox-readers/click-to-tap.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.cryptnox.com/cryptnox-readers/click-to-tap.html" />
+<meta property="og:title" content="Click-to-Tap: FIDO2 User Presence on a Desktop Reader | Cryptnox Docs" />
+<meta property="og:description" content="What the Cryptnox Click-to-Tap button does, why FIDO2 sign-in on a desktop contact reader needs it, what it requires, and how to troubleshoot it." />
+<meta property="og:image" content="https://cryptnox.com/wp-content/uploads/2026/09/cryptnox-documentation-social.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Cryptnox Documentation — official Cryptnox technical documentation" />
+<meta property="og:site_name" content="Cryptnox Docs" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@CryptnoxTech" />
+<meta name="twitter:title" content="Click-to-Tap: FIDO2 User Presence on a Desktop Reader | Cryptnox Docs" />
+<meta name="twitter:description" content="What the Cryptnox Click-to-Tap button does, why FIDO2 sign-in on a desktop contact reader needs it, what it requires, and how to troubleshoot it." />
+<meta name="twitter:image" content="https://cryptnox.com/wp-content/uploads/2026/09/cryptnox-documentation-social.jpg" />
+<meta name="twitter:image:alt" content="Cryptnox Documentation — official Cryptnox technical documentation" />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptnox.com/#organization",
+      "name": "Cryptnox SA",
+      "url": "https://cryptnox.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://docs.cryptnox.com/#logo",
+        "url": "https://docs.cryptnox.com/_static/cryptnox-logo.svg",
+        "contentUrl": "https://docs.cryptnox.com/_static/cryptnox-logo.svg",
+        "caption": "Cryptnox"
+      },
+      "sameAs": [
+        "https://shop.cryptnox.com/",
+        "https://github.com/cryptnox"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://docs.cryptnox.com/#website",
+      "url": "https://docs.cryptnox.com",
+      "name": "Cryptnox Docs",
+      "alternateName": "Cryptnox",
+      "publisher": { "@id": "https://cryptnox.com/#organization" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://docs.cryptnox.com/cryptnox-readers/#webpage",
+      "url": "https://docs.cryptnox.com/cryptnox-readers/",
+      "name": "Cryptnox Smart Card Readers",
+      "description": "Compatibility documentation for Cryptnox USB smart card readers: national eID and professional cards by country, and FIDO2 services and platforms.",
+      "isPartOf": { "@id": "https://docs.cryptnox.com/#website" },
+      "publisher": { "@id": "https://cryptnox.com/#organization" },
+      "inLanguage": "en-US",
+      "keywords": "Cryptnox, smart card reader, USB-C, CCID, PC/SC, eID, FIDO2, NFC, extended APDU, documentation"
+    }
+  ]
+}
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GT-PJ7HDFB');</script>
+
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #101f2e" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Cryptnox Smart Card Readers
+              <img src="_static/cryptnox-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Compatibility guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reader-compatibility.html">Smart Card Reader Compatibility by Country</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fido2-compatibility.html">FIDO2 Card Compatibility — Services and Platforms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Click-to-Tap: FIDO2 User Presence on a Desktop Reader</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-problem-it-solves">The problem it solves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-click-to-tap-works">How Click-to-Tap works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-it">Using it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-click-to-tap-is-not">What Click-to-Tap is not</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#provenance">Provenance</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #101f2e" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cryptnox Smart Card Readers</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Click-to-Tap: FIDO2 User Presence on a Desktop Reader</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="click-to-tap-fido2-user-presence-on-a-desktop-reader">
+<h1>Click-to-Tap: FIDO2 User Presence on a Desktop Reader<a class="headerlink" href="#click-to-tap-fido2-user-presence-on-a-desktop-reader" title="Link to this heading"></a></h1>
+<p><em>Last reviewed: 29 August 2026.</em></p>
+<p>This page explains one button: what it is for, what it requires, and what it does not do.</p>
+<section id="the-problem-it-solves">
+<h2>The problem it solves<a class="headerlink" href="#the-problem-it-solves" title="Link to this heading"></a></h2>
+<p>FIDO2 and WebAuthn require a <strong>user-presence check</strong> on every authentication. The
+authenticator must prove that a human, and not software running unattended in the
+background, approved the sign-in. It is a deliberate part of the standard, not an
+implementation detail.</p>
+<p>A USB security key satisfies that check with a metal touch button. A smart card does not
+have one. When the card sits in an ordinary contact reader, the only gesture left that the
+host recognises as “a person did something” is <strong>removing the card from the slot and
+inserting it again</strong> — once per sign-in.</p>
+<p>That is slow, it wears the card contacts and the reader connector, and the card is out of
+the reader at exactly the moment the user is trying to work.</p>
+</section>
+<section id="how-click-to-tap-works">
+<h2>How Click-to-Tap works<a class="headerlink" href="#how-click-to-tap-works" title="Link to this heading"></a></h2>
+<p>Pressing the button drives the smart-card interface through a controlled
+<strong>extraction-and-reinsertion sequence at the protocol level</strong>. There is no mechanical
+movement: the card is never physically ejected. The host sees the card leave and return,
+which is the event it was waiting for, and the card stays seated in the slot.</p>
+<p>The effect is the contactless “tap” gesture, delivered on a contact-mode card.</p>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26.0%" />
+<col style="width: 74.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Requirement</p></th>
+<th class="head"><p>Detail</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Card</p></td>
+<td><p><strong>Cryptnox FIDO2 smart cards only.</strong> The button drives a Cryptnox-specific
+signalling sequence; it is not a generic CCID feature.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Operating system</p></td>
+<td><p><strong>Windows.</strong> The button has no effect on macOS or Linux.</p></td>
+</tr>
+<tr class="row-even"><td><p>Reader</p></td>
+<td><p>The Cryptnox Click-to-Tap USB-C contact reader. The contactless reader has no
+button and does not apply.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Software</p></td>
+<td><p>None for the button itself. The reader is a standard USB CCID / PC-SC device and
+uses the smart-card stack already present in Windows.</p></td>
+</tr>
+</tbody>
+</table>
+<p>With any other card, or on any other operating system, the device remains a fully
+functional standard CCID / PC-SC contact reader — you simply do not get the tap
+simulation.</p>
+</section>
+<section id="using-it">
+<h2>Using it<a class="headerlink" href="#using-it" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Plug the reader into a USB port. The indicator confirms it has power.</p></li>
+<li><p>Insert the Cryptnox FIDO2 card into the full-size slot, chip contacts down.</p></li>
+<li><p>Sign in to a FIDO2 / WebAuthn service as usual and choose the security key.</p></li>
+<li><p>When the prompt asks you to <strong>tap your security key</strong>, press the button on the reader.</p></li>
+<li><p>The sign-in completes. Leave the card in the slot for the next one.</p></li>
+</ol>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<p><strong>The button does nothing.</strong>
+Check the three requirements above in order: it must be a Cryptnox FIDO2 card, on Windows,
+in the Click-to-Tap reader. Any one of the three missing produces exactly this symptom,
+with no error message.</p>
+<p><strong>The service never asks me to tap.</strong>
+Then there is nothing for the button to answer. Some services complete without a
+user-presence prompt, and some browsers prompt only on first registration. The button is
+only meaningful while a prompt is waiting.</p>
+<p><strong>The card is not detected at all.</strong>
+That is a reader or middleware question, not a Click-to-Tap question. Confirm the card is
+seated with the contacts facing down and fully inserted. On Linux, install <code class="docutils literal notranslate"><span class="pre">pcscd</span></code>,
+<code class="docutils literal notranslate"><span class="pre">libccid</span></code> and <code class="docutils literal notranslate"><span class="pre">pcsc-tools</span></code>, then check that <code class="docutils literal notranslate"><span class="pre">pcsc_scan</span></code> sees the reader.</p>
+<p><strong>FIDO2 sign-in does not work on Linux.</strong>
+Browsers on Linux expect an HID FIDO interface, which a CCID reader does not present by
+itself. Install the open-source <a class="reference external" href="https://github.com/cryptnox/cryptnox-fido2-bridge">Cryptnox FIDO2 HID bridge</a>. Note that this enables FIDO2
+sign-in on Linux — it does not enable the Click-to-Tap button, which remains Windows-only.</p>
+<p><strong>I want to use the button with my eID, PIV or CAC card.</strong>
+Not possible, and not a defect. Click-to-Tap answers a FIDO2 prompt. Government cards
+authenticate through their own middleware and are unaffected by it. See
+<a class="reference internal" href="reader-compatibility.html"><span class="doc">Smart Card Reader Compatibility by Country</span></a> for what those cards need.</p>
+</section>
+<section id="what-click-to-tap-is-not">
+<h2>What Click-to-Tap is not<a class="headerlink" href="#what-click-to-tap-is-not" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Not a replacement for the PIN.</strong> User presence and user verification are different
+checks. The card’s PIN policy is unchanged.</p></li>
+<li><p><strong>Not a security boundary.</strong> The button is a convenience for a gesture the standard
+requires; it neither adds nor removes cryptographic protection.</p></li>
+<li><p><strong>Not a secure element.</strong> The reader holds no keys, stores nothing and signs nothing.
+Every cryptographic operation happens on the card.</p></li>
+<li><p><strong>Not applicable to contactless cards</strong>, which already tap physically.</p></li>
+</ul>
+</section>
+<section id="provenance">
+<h2>Provenance<a class="headerlink" href="#provenance" title="Link to this heading"></a></h2>
+<p>The Click-to-Tap virtual-button signalling is Cryptnox-engineered firmware layered on the
+standard USB CCID interface; the underlying reader hardware is a commodity component. The
+button is protected by registered Austrian utility model <strong>GM 55114/2025</strong>, registered
+German utility model <strong>No. 202025108028.1</strong>, and United States patent application
+<strong>No. 19/534.472</strong> (pending).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <hr/>
+<p style="margin-bottom: 0.25rem;">Last updated on 2026-09-15.</p>
+<p style="margin-bottom: 0.75rem;">&#169; Copyright 2026, Cryptnox SA.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-PJ7HDFB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'GT-PJ7HDFB', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
