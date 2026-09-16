@@ -1,3 +1,5 @@
 docs/_build/
 _site/
 __pycache__/
+# generated from cryptnox-logo.svg by conf.py for the PDF cover
+docs/source/_static/cryptnox-logo-dark.png
