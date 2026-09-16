@@ -431,8 +431,8 @@ What that does **not** mean:
 * It is not the eID authentication or signature function, which is a different applet.
 
 
-What these readers cannot do
-============================
+Limitations
+===========
 
 * **125 kHz cards** — EM4100, HID Prox and similar low-frequency badges. The contactless
   reader is 13.56 MHz only.
