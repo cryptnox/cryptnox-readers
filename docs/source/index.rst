@@ -43,6 +43,13 @@ Cryptnox Smart Card Readers
    fido2-compatibility
    click-to-tap
 
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: About
+
+   license
+
 .. only:: html
 
    Other resources

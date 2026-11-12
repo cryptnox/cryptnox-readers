@@ -9,7 +9,7 @@
 <br/>
 
 [![docs](https://github.com/cryptnox/cryptnox-readers/actions/workflows/deploy.yml/badge.svg)](https://github.com/cryptnox/cryptnox-readers/actions/workflows/deploy.yml)
-[![License: LGPLv3](https://img.shields.io/badge/License-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 Documentation for the **Cryptnox USB smart card readers**: which national eID
 and professional cards work with them, country by country; which services and
@@ -67,3 +67,17 @@ sphinx-build -M latexpdf docs/source docs/_build
 
 Cryptnox smart cards and compatible readers are available at
 [shop.cryptnox.com](https://shop.cryptnox.com).
+
+---
+
+## License
+
+Copyright (C) 2026 Cryptnox SA.
+
+This documentation is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) (see [`LICENSE`](LICENSE)):
+
+- **Attribution** for appropriate credit to Cryptnox SA
+- **NonCommercial** for non-commercial use only
+- **NoDerivatives** for unmodified redistribution only
+
+For inquiries, contact: contact@cryptnox.com
